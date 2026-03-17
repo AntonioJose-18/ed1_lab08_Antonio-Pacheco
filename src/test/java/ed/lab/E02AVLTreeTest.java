@@ -45,7 +45,7 @@ class E02AVLTreeTest {
                                     .getResourceAsStream("ed/lab/E03.csv"))
                             .readAllBytes());
 
-            final String[] lines = fileContent.split("\n");
+            final String[] lines = fileContent.lines().toArray(String[]::new);
 
             Stream.Builder<List<AVLOperations>> builder = Stream.builder();
 
